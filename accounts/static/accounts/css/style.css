@@ -1,0 +1,13 @@
+.input-field {
+    width: 80% !important;
+    margin: 0 auto;
+}
+
+.action-container-elements {
+    min-width: 25% !important;
+}
+
+.action-input {
+    color: black;
+    width: 100% !important;
+}

@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-sm d-flex justify-content-center align-items-center h-100">
+    <div class="w-50 p-2 form-container">
+        <form class="border border-2 rounded p-3" method="post">
+            <div class="form-header mb-3">
+                <h1 class="text-center">Entrar</h1>
+            </div>
+
+            <div class="form-group mb-2">
+                <input class="form-control input-field" type="email" name="email" id="email-field" placeholder="Digite seu email">
+            </div>
+
+            <div class="form-group mb-2">
+                <input class="form-control input-field" type="password" name="password" id="password-field" placeholder="Digite sua senha">
+            </div>
+
+            <div class="d-flex justify-content-center w-100 p-2 action-container">
+                <div class="d-flex flex-column action-container-elements">
+                    <button class="btn btn-outline-success border border-2 rounded-pill w-100 mb-2 action-input" type="submit">Login</button>
+                    <a class="btn btn-outline-info border border-2 rounded-pill w-100 action-input" href="#">Cadastrar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

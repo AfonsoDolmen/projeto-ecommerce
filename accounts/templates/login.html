@@ -5,6 +5,10 @@
 <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
 {% endblock %}
 
+{% block js %}
+<script src="{% static 'accounts/js/validation.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 <div class="container-sm d-flex justify-content-center align-items-center h-100">
     <div class="w-50 p-2 form-container">
@@ -15,11 +19,11 @@
             </div>
 
             <div class="form-group mb-2">
-                <input class="form-control input-field" type="email" name="email" id="email-field" placeholder="Digite seu email">
+                <input class="form-control input-field" type="email" name="email" id="email-field" placeholder="Digite seu email" required>
             </div>
 
             <div class="form-group mb-2">
-                <input class="form-control input-field" type="password" name="password" id="password-field" placeholder="Digite sua senha">
+                <input class="form-control input-field" type="password" name="password" id="password-field" placeholder="Digite sua senha" required>
             </div>
 
             <div class="d-flex justify-content-center w-100 p-2 action-container">

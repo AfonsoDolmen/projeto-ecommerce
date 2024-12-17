@@ -14,11 +14,18 @@ class LoginView(View):
         email = self.request.POST.get('email')
         password = self.request.POST.get('password')
         
+        # Validação
+        if email and password:            
+            if len(password) != 8:
+                return HttpResponseRedirect('')
+        
+        # Capturando o usuário com o email
         user_object = User.objects.get(email=email)
         
         # Verificando as credenciais
         user = authenticate(self.request, username=user_object.username, password=password)
 
+        # Se as credenciais estiverem corretas, autentique o usuário
         if user and email == user_object.email:
             login(self.request, user)
             return HttpResponseRedirect('/login/')

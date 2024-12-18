@@ -12,3 +12,49 @@ O objetivo deste projeto é construir um pequeno **ecommerce** utilizando **Pyth
 ## Status
 
 Este projeto está em **desenvolvimento**. Atualmente, a autenticação de usuários já foi implementada, e o gerenciamento de produtos está em fase de construção. As funcionalidades de carrinho de compras e finalização de pedidos estão previstas para a próxima etapa.
+
+## Como executar
+
+### 1. Clone o repositório em sua máquina
+
+```bash
+git clone https://github.com/AfonsoDolmen/projeto-ecommerce.git
+```
+
+### 2. Crie um ambiente virtual Python dentro da pasta do projeto e inicialize
+
+```bash
+python -m venv .venv
+```
+
+### 3. ative seu ambiente Python virtual
+
+
+#### No Windows:
+```bash
+.venv\Scripts\activate
+```
+
+#### No Linux/Mac:
+```bash
+source .venv/bin/activate
+```
+
+
+### 4. Instale as dependências do projeto
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Aplique as migrações do banco de dados
+
+```bash
+python manage.py migrate
+```
+
+### 6. Inicie o servidor local
+
+```bash
+python manage.py runserver
+```

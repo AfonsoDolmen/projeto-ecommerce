@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', function(){
     emailField.addEventListener('input', function(){
         const emailValue = emailField.value
 
-        if (!emailValue.includes("@")) {
+        if (!emailValue.includes("@") || !emailValue.includes(".")) {
             emailField.classList.add('validation-error');
             emailField.placeholder = "Email inválido!";
+        }else if (emailValue.lenght == 0) {
+            emailField.placeholder = "Digite seu email";
         } else {
             emailField.classList.add('validation-success');
         }
@@ -21,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function(){
         if (passwordLen != 8) {
             passwordField.classList.add('validation-error');
             passwordField.placeholder = "A senha deve conter no minimo 8 caracteres";
+        } else if (passwordLen == 0) {
+            passwordField.placeholder = "Digite sua senha";
         } else {
             passwordField.classList.add('validation-success');
         }

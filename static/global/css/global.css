@@ -5,3 +5,45 @@ html, body {
 main {
     height: 90%;
 }
+
+.menu-list {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.header-link {
+    position: relative;
+}
+
+.header-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0056b3;
+    transition: width 0.3s ease;
+}
+
+.header-link:hover::after {
+    width: 100%;
+}
+
+.header-link {
+    font-family: Arial;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333333;
+}
+
+.user-welcome-text {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.logout-link {
+    color: var(--bs-danger) !important;
+}

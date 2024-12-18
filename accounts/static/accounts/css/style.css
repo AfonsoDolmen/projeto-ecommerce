@@ -31,4 +31,8 @@
     .form-container {
         width: 100% !important;
     }
+
+    .input-field {
+        width: 100% !important;
+    }
 }

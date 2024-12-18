@@ -1,0 +1,9 @@
+{% if messages %}
+    <div class="w-100 message-container">
+        {% for message in messages %}
+            <div class="alert {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %} alert-danger {% elif message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %} alert-success {% endif %} w-100 text-center">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

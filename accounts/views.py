@@ -65,10 +65,29 @@ class RegisterView(View):
             messages.error(self.request, 'As senhas não são iguais!')
             return HttpResponseRedirect(reverse_lazy('register'))
         
+        
+        # Verifica se já existe um usuário cadastrado
+        if User.objects.filter(username=username).exists():
+            messages.error(self.request, 'Já existe um usuário com este nome!')
+            return HttpResponseRedirect(reverse_lazy('login'))
+        
+        if User.objects.filter(email=email).exists():
+            messages.error(self.request, 'Já existe um usuário com este email!')
+            return HttpResponseRedirect(reverse_lazy('login'))
+        
         # Se tudo estiver certo, crie um novo usuário
         new_user = User(username=username, email=email)
         new_user.set_password(password)
         new_user.save()
 
         messages.success(self.request, 'Usuário cadastrado com sucesso! Por favor, faça login.')
+        return HttpResponseRedirect(reverse_lazy('login'))
+    
+
+class LogoutView(View):
+    def get(self, *args, **kwargs):
+        logout(self.request)
+        
+        messages.success(self.request, 'Desconectado com sucesso!')
+        
         return HttpResponseRedirect(reverse_lazy('login'))

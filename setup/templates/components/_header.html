@@ -36,7 +36,7 @@
                                 <ul class="dropdown-menu">
                                     <li><h6 class="dropdown-header user-auth-welcome">Olá, {{ user.username.capitalize }}!</h6></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item logout-link" href="#">Sair</a></li>
+                                    <li><a class="dropdown-item logout-link" href="{% url 'logout' %}">Sair</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -21,7 +21,7 @@ Este projeto está em **desenvolvimento**. Atualmente, a autenticação de usuá
 git clone https://github.com/AfonsoDolmen/projeto-ecommerce.git
 ```
 
-### 2. Crie um ambiente virtual Python dentro da pasta do projeto e inicialize
+### 2. Crie um ambiente virtual Python dentro da pasta do projeto
 
 ```bash
 python -m venv .venv

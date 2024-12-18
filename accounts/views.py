@@ -17,7 +17,7 @@ class LoginView(View):
         
         # Validação
         if email and password:            
-            if len(password) != 8:
+            if len(password) < 8:
                 return HttpResponseRedirect(reverse_lazy('login'))
         
         # Capturando o usuário com o email
@@ -39,4 +39,28 @@ class RegisterView(View):
         return render(self.request, 'register.html')
 
     def post(self, *args, **kwargs):
-        pass
+        # Coletando informações do formulário
+        username = self.request.POST.get('username')
+        email = self.request.POST.get('email')
+        password = self.request.POST.get('password')
+        confirm_password = self.request.POST.get('confirm-password')
+
+        # Validações
+        if "@" not in email or "." not in email:
+            print('email inválido')
+            return HttpResponseRedirect(reverse_lazy('register'))
+        
+        if len(password) < 8:
+            print('senha inválida')
+            return HttpResponseRedirect(reverse_lazy('register'))
+
+        if password != confirm_password:
+            print('senhas diferentes')
+            return HttpResponseRedirect(reverse_lazy('register'))
+        
+        # Se tudo estiver certo, crie um novo usuário
+        new_user = User(username=username, email=email)
+        new_user.set_password(password)
+        new_user.save()
+
+        return HttpResponseRedirect(reverse_lazy('login'))

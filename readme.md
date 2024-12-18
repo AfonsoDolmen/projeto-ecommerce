@@ -58,3 +58,5 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
+
+O servidor estará acessivel no navegador em http://127.0.0.1:8000

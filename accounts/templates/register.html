@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+{% endblock %}
+
+{% block js %}
+<script src="accounts/js/validation.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container-sm d-flex justify-content-center align-items-center h-100">
+    <div class="w-50 p-2 form-container">
+        <form class="border border-2 rounded p-3" method="post">
+            {% csrf_token %}
+            <div class="form-header mb-3">
+                <h1 class="text-center">Cadastrar</h1>
+            </div>
+
+            <div class="form-group mb-2">
+                <input class="form-control" type="text" name="username" id="username-field" placeholder="Digite seu nome de usuário" required>
+            </div>
+
+            <div class="form-group mb-2">
+                <input class="form-control" type="email" name="email" id="email-field" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="form-group mb-2">
+                <input class="form-control" type="password" name="password" id="password-field" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="form-group mb-2">
+                <input class="form-control" type="password" name="confirm-passoword" id="confirm-password-field" placeholder="Digite sua senha novamente" required>
+            </div>
+
+            <div class="d-flex justify-content-center w-100 p-2 action-container">
+                <div class="d-flex flex-column action-container-elements">
+                    <button class="btn btn-outline-success border border-2 rounded-pill w-100 mb-2 action-input" type="submit">Cadastrar</button>
+                    <a class="btn btn-outline-secondary border border-2 rounded-pill w-100 action-input" href="{% url 'login' %}">Voltar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

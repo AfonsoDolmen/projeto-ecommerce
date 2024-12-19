@@ -15,9 +15,9 @@ class Product(models.Model):
     price = models.PositiveIntegerField(null=False, blank=False)
     category = models.ForeignKey(Category, on_delete=models.PROTECT, verbose_name='Categoria')
     stock = models.PositiveIntegerField(default=0, verbose_name='Quantidade')
+    slug = models.SlugField(unique=True, blank=True, null=True, verbose_name='Slug')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')
-    # TODO: Adicionar campo de slug para url amigáveis (obs: utilizar o slugfy durante o desenvolvimento)
 
     def __str__(self):
         return self.title

@@ -81,7 +81,7 @@ class RegisterView(View):
         new_user.save()
 
         messages.success(self.request, 'Usuário cadastrado com sucesso! Por favor, faça login.')
-        return HttpResponseRedirect(reverse_lazy('login'))
+        return HttpResponseRedirect(reverse_lazy('home'))
     
 
 class LogoutView(View):

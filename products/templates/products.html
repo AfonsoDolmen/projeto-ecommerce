@@ -31,7 +31,7 @@
         <h2>Produtos</h2>
     </div>
 
-    <div class="d-flex justify-content-center mt-4 py-2 products-content-container">
+    <div class="d-flex justify-content-center my-4 py-2 products-content-container">
         {% if products %}
             {% for product in products %}
                 {% include 'components/_product-card.html' %}
@@ -42,5 +42,7 @@
             </div>
         {% endif %}
     </div>
+
+    {% include 'components/_pagination.html' %}
 </section>
 {% endblock %}

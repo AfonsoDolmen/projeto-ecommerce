@@ -11,3 +11,17 @@
 .carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.4);
 }
+
+.client-photo-container > img {
+    width: 120px;
+    height: 120px;
+    object-fit:cover;
+}
+
+.product-card {
+    width: 33.3%;
+}
+
+.product-card > .img-card-top {
+    object-fit: cover;
+}

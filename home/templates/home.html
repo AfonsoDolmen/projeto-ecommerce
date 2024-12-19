@@ -13,43 +13,108 @@
         <div class="carousel-container">
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
                 </div>
 
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="{% static 'home/images/carousel-image-1.jpg' %}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Melhores roupas você encontra aqui!</h5>
-                      <p>Melhores marcas, preços e qualidade.</p>
-                    </div>
-                  </div>
+					<div class="carousel-item active">
+						<img src="{% static 'home/images/carousel-image-1.jpg' %}" class="d-block w-100" alt="...">
+						<div class="carousel-caption d-none d-md-block">
+						<h5>Melhores roupas você encontra aqui!</h5>
+						<p>Melhores marcas, preços e qualidade.</p>
+						</div>
+					</div>
 
-                  <div class="carousel-item">
-                    <img src="{% static 'home/images/carousel-image-2.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
+					<div class="carousel-item">
+						<img src="{% static 'home/images/carousel-image-2.jpg' %}" class="d-block w-100" alt="...">
+					</div>
 
-                  <div class="carousel-item">
-                    <img src="{% static 'home/images/carousel-image-3.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
+					<div class="carousel-item">
+						<img src="{% static 'home/images/carousel-image-3.jpg' %}" class="d-block w-100" alt="...">
+					</div>
 
-                  <div class="carousel-item">
-                    <img src="{% static 'home/images/carousel-image-4.jpg' %}" class="d-block w-100" alt="...">
-                  </div>
+					<div class="carousel-item">
+						<img src="{% static 'home/images/carousel-image-4.jpg' %}" class="d-block w-100" alt="...">
+					</div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon rounded rounded-circle" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+					<span class="carousel-control-prev-icon rounded rounded-circle" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                  <span class="carousel-control-next-icon rounded rounded-circle" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+						<span class="carousel-control-next-icon rounded rounded-circle" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </div>
     </div>
+
+	<section class="container mt-5">
+		<div class="feedback-header-container">
+			<h2 class="text-center">Depoimentos</h2>
+		</div>
+
+		<div class="row feedback-content-container">
+			<div class="col card shadow mr-2">
+				<div class="text-center">
+					<i class="bi bi-chat-quote fs-1 text-primary"></i>
+				</div>
+
+				<div class="card-body text-center">
+					<p class="card-text fst-italic">"Melhor roupa de loja online, com toda certeza!"</p>
+					<h5 class="card-title">- Marcos Arruda</h5>
+				</div>
+
+				<div class="d-flex justify-content-center mb-3 client-photo-container">
+					<img class="border border-2 rounded rounded-circle shadow" src="{% static 'home/images/client-selfie-1.jpg' %}">
+				</div>
+			</div>
+
+			<div class="col card shadow mx-2">
+				<div class="text-center">
+					<i class="bi bi-chat-quote fs-1 text-primary"></i>
+				</div>
+
+				<div class="card-body text-center">
+					<p class="card-text fst-italic">"Amei a variadade de estilo, com certeza é minha cara!"</p>
+					<h5 class="card-title">- Marcos Arruda</h5>
+				</div>
+
+				<div class="d-flex justify-content-center mb-3 client-photo-container">
+					<img class="border border-2 rounded rounded-circle shadow" src="{% static 'home/images/client-selfie-2.jpg' %}">
+				</div>
+			</div>
+
+			<div class="col card shadow ml-2">
+				<div class="text-center">
+					<i class="bi bi-chat-quote fs-1 text-primary"></i>
+				</div>
+
+				<div class="card-body text-center">
+					<p class="card-text fst-italic">"Nota 10! Entrega muito rápida e tecidos de qualidade."</p>
+					<h5 class="card-title">- Marcos Arruda</h5>
+				</div>
+
+				<div class="d-flex justify-content-center mb-3 client-photo-container">
+					<img class="border border-2 rounded rounded-circle shadow" src="{% static 'home/images/client-selfie-3.jpg' %}">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="container mt-5 recent-products-container">
+		<div class="recent-products-header">
+			<h2 class="text-center">Produtos Mais Recentes</h2>
+		</div>
+
+		<div class="d-flex justify-content-center w-100 p-2 recent-products-content">
+			{% include 'components/_product-card.html' %}
+			{% include 'components/_product-card.html' %}
+			{% include 'components/_product-card.html' %}
+		</div>
+	</section>
 </div>
 {% endblock %}

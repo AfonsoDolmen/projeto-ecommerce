@@ -2,6 +2,7 @@
     height: 70vh;
     width: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .carousel-caption {

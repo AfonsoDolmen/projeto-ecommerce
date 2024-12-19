@@ -9,4 +9,16 @@
     flex: 1 1 calc(20% - 16px);
     max-width: 20%;
     box-sizing: border-box;
+    min-height: 400px;
+}
+
+.card-body {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-img-top {
+    object-fit: cover;
 }

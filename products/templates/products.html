@@ -1,7 +1,46 @@
 {% extends 'index.html' %}
+{% load static %}
 
 {% block title %}Produtos{% endblock %}
 
-{% block content %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'products/css/category.css' %}">
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
 
+{% block content %}
+<section class="container p-3 products-list-section">
+    <div class="mt-5 category-container">
+        <div class="text-center category-header-container">
+            <h2>Categorias</h2>
+        </div>
+
+        <div class="mt-4 py-2 category-content-container">
+            <ul class="row">
+                <li class="col text-center"><a class="header-link" href="?category=camisa"><h3>Camisas</a></h3></li>
+                <li class="col text-center"><a class="header-link" href="?category=blusa"><h3>Blusas</a></h3></li>
+                <li class="col text-center"><a class="header-link" href="?category=calça"><h3>Calças</a></h3></li>
+                <li class="col text-center"><a class="header-link" href="?category=bermuda"><h3>Bermudas</a></h3></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="container p-3 products-container">
+    <div class="text-center products-header-container">
+        <h2>Produtos</h2>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4 py-2 products-content-container">
+        {% if products %}
+            {% for product in products %}
+                {% include 'components/_product-card.html' %}
+            {% endfor %}
+        {% else %}
+            <div class="text-center null-products-container">
+                <p>Por enquanto não estamos com nenhum produto.</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
 {% endblock %}

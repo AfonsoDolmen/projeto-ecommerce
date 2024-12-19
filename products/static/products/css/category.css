@@ -1,0 +1,5 @@
+.category-content-container ul {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 0;
+}

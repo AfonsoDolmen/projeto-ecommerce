@@ -17,10 +17,10 @@
     width: 120px;
     height: 120px;
     object-fit:cover;
+    object-position: center;
 }
 
 .product-card {
-    /* height: 400px; */
     width: 33.3%;
 }
 
@@ -31,7 +31,8 @@
     justify-content: space-between;
 }
 
-.img-card-top {
-    object-fit: contain;
-    height: 100px !important;
+.card-img-top {
+    object-fit: cover;
+    object-position: center;
+    height: 400px !important;
 }

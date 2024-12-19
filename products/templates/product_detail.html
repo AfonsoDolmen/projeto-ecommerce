@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'products/css/detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="container p-3 detail-section-container">
+    <div class="d-flex border border-2 rounded shadow product-detail-container">
+        <div class="product-detail-img">
+            <img class="border-right rounded-2 border-2" src="{{ object.image.url }}" alt="{{ object.title }}">
+        </div>
+
+        <div class="p-3 product-detail-content">
+            <h2 class="border-bottom fst-arial">{{ object.title }}</h1>
+            <p>{{ object.description }}</p>
+            <p class="fw-bold">R$ {{ object.price }}</p>
+            <p class="text-secondary"><strong>Quantidade disponível: </strong>{{ object.stock }}</p>
+            <a class="btn btn-success" href="#">Adicionar ao Carrinho</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

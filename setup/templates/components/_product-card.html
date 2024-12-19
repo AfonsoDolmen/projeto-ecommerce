@@ -1,11 +1,14 @@
 <div class="card shadow mx-2 product-card">
-    <img class="card-img-top" src="{{ product.image.url }}">
+    <a class="detail-link" href="{% url 'product_detail' product.slug %}">
+        <img class="card-img-top" src="{{ product.image.url }}">
+    </a>
 
-    <div class="card-body">
-        <h5 class="card-title">{{ product.title }}</h5>
-        <p class="card-text text-muted">{{ product.description }}</p>
-        <p class="card-price fw-bold">R$ {{ product.price }}</p>
-
-        <a class="btn btn-success" href="#">Adicionar ao Carrinho</a>
-    </div>
+    <a class="detail-link" href="{% url 'product_detail' product.slug %}">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text text-muted">{{ product.description }}</p>
+            <p class="card-price fw-bold">R$ {{ product.price }}</p>
+            <a class="btn btn-success" href="#">Adicionar ao Carrinho</a>
+        </div>
+    </a>
 </div>

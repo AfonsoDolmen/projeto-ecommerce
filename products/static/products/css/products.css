@@ -9,15 +9,15 @@
     flex: 1 1 calc(33.3% - 16px);
     max-width: 20%;
     box-sizing: border-box;
-    min-height: 400px;
-    min-width: 250px; /* Depois ver qual largura fica melhor */
+    min-height: 500px;
+    min-width: 400px; /* Depois ver qual largura fica melhor */
 }
 
 .card-body {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around !important;
 }
 
 .card-img-top {
@@ -25,3 +25,9 @@
     object-position: center;
     height: 400px !important;
 }
+
+.detail-link {
+    text-decoration: none !important;
+    color: inherit;
+}
+

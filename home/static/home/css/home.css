@@ -36,3 +36,8 @@
     object-position: center;
     height: 400px !important;
 }
+
+.detail-link {
+    text-decoration: none !important;
+    color: inherit;
+}

@@ -14,7 +14,7 @@ class ProductsListView(ListView):
 
         # Filtragem pela categoria
         if category:
-            queryset = Product.objects.filter(category__category=category)
+            queryset = Product.objects.filter(category__category=category.capitalize())
 
         return queryset
 

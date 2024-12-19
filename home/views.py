@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.views.generic import View
+from products.models import Product
 
 
 class HomeView(View):
     def get(self, *args, **kwargs):
-        return render(self.request, 'home.html')
+        # Retorna somente os três ultimos produtos
+        products = Product.objects.all()[:3]
+        
+        return render(self.request, 'home.html', {'products': products})

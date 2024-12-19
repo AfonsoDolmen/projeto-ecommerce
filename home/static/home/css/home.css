@@ -19,9 +19,18 @@
 }
 
 .product-card {
+    /* height: 400px; */
     width: 33.3%;
 }
 
-.product-card > .img-card-top {
-    object-fit: cover;
+.card-body {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-card-top {
+    object-fit: contain;
+    height: 100px !important;
 }

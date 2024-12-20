@@ -1,0 +1,3 @@
+# Ignorar arquivos de bibliotecas externas
+node_modules/* linguist-vendored
+static/js/* linguist-vendored

@@ -31,3 +31,41 @@
     color: inherit;
 }
 
+@media screen and (max-width: 520px) {
+    .category-header-container h2 {
+        font-size: 2em;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+    }
+
+    .category-content-container ul.row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .products-container {
+        width: 100% !important;
+    }
+
+    .products-header-container h2 {
+        font-size: 2em;
+        border-bottom: 1px solid #333;
+        padding-bottom: 5px;
+    }
+
+    .products-content-container {
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    .product-card {
+        min-width: 100% !important;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .card-img-top {
+        width: auto important;
+    }
+}

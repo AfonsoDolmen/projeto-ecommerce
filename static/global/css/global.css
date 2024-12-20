@@ -47,3 +47,36 @@ main {
 .logout-link {
     color: var(--bs-danger) !important;
 }
+
+@media screen and (max-width: 520px) {
+    html, body, main{
+        width: auto;
+        height: auto;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    /* .user-info-container {
+        display: none !important;
+    } */
+
+    .menu-mobile-container {
+        display: block !important;
+    }
+
+    .dropdown-menu-mobile > .dropdown-toggle {
+        border: none !important;
+        background-color: transparent !important;
+    }
+
+    .dropdown-menu-mobile > ul.dropdown-menu {
+        width: 100% !important;
+        position: fixed !important;
+    }
+
+    .dropdown-menu-mobile > ul.dropdown-menu > li {
+        margin: 20px 0;
+    }
+}

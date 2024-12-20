@@ -41,3 +41,52 @@
     text-decoration: none !important;
     color: inherit;
 }
+
+@media screen and (max-width: 520px) {
+    .carousel-item img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .feedback-section {
+        width: 100% !important;
+        padding: 0;
+    }
+
+    .feedback-header-container h2 {
+        font-size: 2em;
+    }
+
+    .feedback-content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5px;
+        gap: 15px;
+    }
+
+    .feedback-content-container .card {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .recent-products-header h2 {
+        font-size: 1.8em;
+    }
+
+    .recent-products-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .recent-products-container {
+        padding: 0 !important;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}

@@ -162,6 +162,7 @@ cython_debug/
 local_settings.py
 env
 db.sqlite3
+media/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

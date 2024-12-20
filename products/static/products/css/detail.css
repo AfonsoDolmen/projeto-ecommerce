@@ -30,3 +30,32 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+@media screen and (max-width: 520px) {
+    .product-detail-container {
+        flex-direction: column;
+    }
+
+    .product-detail-img > img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .product-detail-content h2 {
+        font-size: 2em;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    .product-detail-content p {
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    .product-detail-content a.btn {
+        padding: 5px 10px;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+}

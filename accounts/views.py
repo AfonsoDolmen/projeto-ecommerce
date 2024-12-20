@@ -35,7 +35,7 @@ class LoginView(View):
         # Se as credenciais estiverem corretas, autentique o usuário
         if user and email == user_object.email:
             login(self.request, user)
-            return HttpResponseRedirect(reverse_lazy('login'))
+            return HttpResponseRedirect(reverse_lazy('home'))
         
         messages.error(self.request, 'Login inválido!')
         return HttpResponseRedirect(reverse_lazy('login'))
@@ -88,6 +88,4 @@ class LogoutView(View):
     def get(self, *args, **kwargs):
         logout(self.request)
         
-        messages.success(self.request, 'Desconectado com sucesso!')
-        
-        return HttpResponseRedirect(reverse_lazy('login'))
+        return HttpResponseRedirect(reverse_lazy('home'))

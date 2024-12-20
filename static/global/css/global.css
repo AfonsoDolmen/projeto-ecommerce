@@ -79,4 +79,8 @@ main {
     .dropdown-menu-mobile > ul.dropdown-menu > li {
         margin: 20px 0;
     }
+
+    .user-auth-link {
+        font-size: 1em;
+    }
 }

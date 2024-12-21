@@ -1,9 +1,13 @@
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from products.models import Product
 
 
 class ProductListView(ListView, LoginRequiredMixin, PermissionRequiredMixin):
-    pass
+    model = Product
+    context_object_name = 'product'
+    template_name = 'admin_list.html'
+    paginate_by = 10
 
 
 class ProductCreateView(CreateView, LoginRequiredMixin, PermissionRequiredMixin):

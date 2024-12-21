@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'administration/css/sidebar.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% include 'components/_sidebar.html' %}
+
+<div class="container-fluid bg-success">
+
+</div>
+
+{% endblock %}

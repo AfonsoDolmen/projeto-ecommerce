@@ -5,7 +5,7 @@ from products.models import Product
 
 class ProductListView(ListView, LoginRequiredMixin, PermissionRequiredMixin):
     model = Product
-    context_object_name = 'product'
+    context_object_name = 'products'
     template_name = 'admin_list.html'
     paginate_by = 10
 

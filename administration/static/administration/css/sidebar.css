@@ -3,12 +3,14 @@ main{
 }
 
 .sidebar-container {
-    background-color: #CCC;
+    background-color: #343a40;
     min-width: 15%;
+    color: #fff;
 }
 
 .sidebar-header-content h2 {
     font-weight: bolder;
+    color: #f8f9fa;
 }
 
 .sidebar-content ul {
@@ -24,4 +26,20 @@ main{
     font-family: Arial;
     font-size: 1.2em;
     font-weight: initial !important;
+}
+
+div.dropdown-center > .dropdown-toggle {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2em;
+    font-family: Arial;
+    color: #fff;
+}
+
+div.dropdown-center > ul.dropdown-menu a {
+    font-size: 0.9em;
+}
+
+div.dropdown-center > ul.dropdown-menu a:hover {
+    background-color: var(--bs-success);
 }

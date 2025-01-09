@@ -1,6 +1,7 @@
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from products.models import Product
+from administration.forms import CreateProductForm
 
 
 class ProductListView(ListView, LoginRequiredMixin, PermissionRequiredMixin):
@@ -11,7 +12,9 @@ class ProductListView(ListView, LoginRequiredMixin, PermissionRequiredMixin):
 
 
 class ProductCreateView(CreateView, LoginRequiredMixin, PermissionRequiredMixin):
-    pass
+    model = Product
+    template_name = 'admin_create.html'
+    form_class = CreateProductForm
 
 
 class ProductUpdateView(UpdateView, LoginRequiredMixin, PermissionRequiredMixin):

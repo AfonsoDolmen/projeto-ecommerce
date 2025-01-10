@@ -1,9 +1,9 @@
-from django.form import ModelForm
-from django.core.excepetions import ValidationError
+from django.forms import ModelForm
+from django.core.exceptions import ValidationError
 from products.models import Product
 
 
-class CreateProductForm(forms.ModelForm):
+class CreateProductForm(ModelForm):
     
     class Meta:
         model = Product

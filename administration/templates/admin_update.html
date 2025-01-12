@@ -1,0 +1,58 @@
+{% extends 'home.html' %}
+
+{% block title %}Alterar Produto - ADMIN{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center form-update-container">
+    <div class="form-update-content">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="form-group my-3">
+                {{ form.title }}
+            </div>
+
+            <div class="form-group my-3">
+                {{ form.description }}
+            </div>
+
+            <div class="form-group my-3">
+                {% if form.price.errors %}
+                <div class="alert alert-danger">
+                    {{ form.price.errors }}
+                </div>
+                {% endif %}
+
+                {{ form.price }}
+            </div>
+
+            <div class="form-group my-3">
+                {{ form.category }}
+            </div>
+            
+            <div class="form-group my-3">
+                {% if form.stock.errors %}
+                <div class="alert alert-danger">
+                    {{ form.stock.errors }}
+                </div>
+                {% endif %}
+
+                {{ form.stock }}
+            </div>
+            
+            <div class="form-group my-3">
+                {{ form.slug }}
+            </div>
+
+            <div class="form-group my-3">
+                {{ form.image }}
+            </div>
+
+            <div class="form-group d-flex justify-content-center">
+                <input class="btn btn-info mx-1" type="submit" value="Alterar">
+                <a class="btn btn-secondary mx-1" href="{% url 'admin_list' %}">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

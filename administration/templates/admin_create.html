@@ -8,7 +8,7 @@ Criar Novo Produto - ADMIN
 {% block content %}
 <div class="container d-flex justify-content-center form-create-container">
     <div class="my-3 form-create-content">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group my-3">
                 {{ form.title }}

@@ -27,4 +27,6 @@ class ProductUpdateView(UpdateView, LoginRequiredMixin, PermissionRequiredMixin)
 
 
 class ProductDeleteView(DeleteView, LoginRequiredMixin, PermissionRequiredMixin):
-    pass
+    model = Product
+    template_name = 'admin_delete.html'
+    success_url = reverse_lazy('admin_list')

@@ -40,3 +40,22 @@ class CreateProductForm(forms.ModelForm):
                 'placeholder': 'Digite a url (ex: blusa-de-inverno)',
             }),
         }
+
+    def clean_price(self):
+        price = self.cleaned_data['price']
+
+        if price is 0:
+            self.add_error('price', 'O preço não pode ser 0.')
+
+        if price < 50:
+            self.add_error('price', 'O preço não pode ser menor que 50.')
+
+        return price
+
+    def clean_stock(self):
+        stock = self.cleaned_data['stock']
+
+        if stock is 0:
+            self.add_error('stock', 'A quantidade não pode ser 0.')
+
+        return stock

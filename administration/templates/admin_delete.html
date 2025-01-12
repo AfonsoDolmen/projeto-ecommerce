@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block title %}Deletar Produto - ADMIN{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center my-3 delete-product-container">
+    <div class="delete-product-content border rounded p-3">
+        <div class="delete-product-header text-center">
+            <h5>Tem certeza que deseja deletar {{ object.title }}?</h5>
+        </div>
+
+        <div class="delete-product-body text-center mt-4">
+            <p>Deletar o produto {{ object.title }} será irreversível.</p>
+        </div>
+
+        <form class="d-flex justify-content-center" method="post">
+            {% csrf_token %}
+            <input class="btn btn-danger mx-1" type="submit" value="Deletar">
+            <a class="btn btn-secondary mx-1" href="{% url 'admin_list' %}">Voltar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

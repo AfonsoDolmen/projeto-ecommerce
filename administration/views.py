@@ -20,7 +20,10 @@ class ProductCreateView(CreateView, LoginRequiredMixin, PermissionRequiredMixin)
 
 
 class ProductUpdateView(UpdateView, LoginRequiredMixin, PermissionRequiredMixin):
-    pass
+    model = Product
+    template_name = 'admin_update.html'
+    form_class = ProductForm
+    success_url = reverse_lazy('admin_list')
 
 
 class ProductDeleteView(DeleteView, LoginRequiredMixin, PermissionRequiredMixin):

@@ -2,7 +2,7 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.urls import reverse_lazy
 from products.models import Product
-from administration.forms import CreateProductForm
+from administration.forms import ProductForm
 
 
 class ProductListView(ListView, LoginRequiredMixin, PermissionRequiredMixin):
@@ -15,7 +15,7 @@ class ProductListView(ListView, LoginRequiredMixin, PermissionRequiredMixin):
 class ProductCreateView(CreateView, LoginRequiredMixin, PermissionRequiredMixin):
     model = Product
     template_name = 'admin_create.html'
-    form_class = CreateProductForm
+    form_class = ProductForm
     success_url = reverse_lazy('admin_list')
 
 

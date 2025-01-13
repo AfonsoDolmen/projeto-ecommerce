@@ -1,0 +1,19 @@
+.mobile-header {
+    display: none;
+}
+
+@media screen and (max-width: 520px) {
+    main {
+        display: block;
+    }
+    
+    .sidebar-container {
+        display:none;
+    }
+
+    .mobile-header {
+        display: block;
+        background-color: #343a40;
+        margin-bottom: 20px;
+    }
+}

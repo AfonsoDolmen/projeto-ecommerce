@@ -1,3 +1,15 @@
 .actions-col {
     gap: 10px;
 }
+
+@media screen and (max-width: 520px) {
+    .product-admin-header > h2 {
+        font-size: 1.2em;
+    }
+
+    table {
+        font-size: 1em !important;
+        overflow-x: scroll !important;
+        width: 100% !important;
+    }
+}

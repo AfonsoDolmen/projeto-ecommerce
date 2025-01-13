@@ -30,10 +30,10 @@ class LoginView(View):
         user_object = User.objects.get(email=email)
         
         # Verificando as credenciais
-        user = authenticate(self.request, username=user_object.username, password=password)
+        user = authenticate(self.request, username=user_object.username, password=password, email=email)
 
         # Se as credenciais estiverem corretas, autentique o usuário
-        if user and email == user_object.email:
+        if user:
             login(self.request, user)
             return HttpResponseRedirect(reverse_lazy('home'))
         

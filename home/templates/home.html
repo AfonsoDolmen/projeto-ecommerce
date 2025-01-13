@@ -65,7 +65,7 @@
 
 				<div class="card-body text-center">
 					<p class="card-text fst-italic">"Melhor roupa de loja online, com toda certeza!"</p>
-					<h5 class="card-title">- Marcos Arruda</h5>
+					<h5 class="card-title">- Fernanda Costa</h5>
 				</div>
 
 				<div class="d-flex justify-content-center mb-3 client-photo-container">
@@ -80,7 +80,7 @@
 
 				<div class="card-body text-center">
 					<p class="card-text fst-italic">"Amei a variadade de estilo, com certeza é minha cara!"</p>
-					<h5 class="card-title">- Marcos Arruda</h5>
+					<h5 class="card-title">- Eduarda Silva</h5>
 				</div>
 
 				<div class="d-flex justify-content-center mb-3 client-photo-container">
@@ -95,7 +95,7 @@
 
 				<div class="card-body text-center">
 					<p class="card-text fst-italic">"Nota 10! Entrega muito rápida e tecidos de qualidade."</p>
-					<h5 class="card-title">- Marcos Arruda</h5>
+					<h5 class="card-title">- Rafael Santos</h5>
 				</div>
 
 				<div class="d-flex justify-content-center mb-3 client-photo-container">
@@ -105,18 +105,17 @@
 		</div>
 	</section>
 
+	{% if products %}
 	<section class="container mt-5 recent-products-container">
 		<div class="recent-products-header">
 			<h2 class="text-center">Produtos Mais Recentes</h2>
 		</div>
-
-		{% if products %}
 			<div class="d-flex justify-content-center w-100 p-2 recent-products-content">
 				{% for product in products %}
 					{% include "components/_product-card.html" %}
 				{% endfor %}
 			</div>
-		{% endif %}
 	</section>
+	{% endif %}
 </div>
 {% endblock %}

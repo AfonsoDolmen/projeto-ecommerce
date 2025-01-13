@@ -3,4 +3,5 @@ from django.views import View
 
 
 class AboutView(View):
-    pass
+    def get(self, *args, **kwargs):
+        return render(self.request, 'about.html')

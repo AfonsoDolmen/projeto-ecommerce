@@ -36,10 +36,18 @@ div.dropdown-center > .dropdown-toggle {
     color: #fff;
 }
 
+a.dropdown-item {
+    background-color: #6c757d;
+    color: #fff !important;
+    border-radius: 5px;
+    text-align: center;
+}
+
 div.dropdown-center > ul.dropdown-menu a {
     font-size: 0.9em;
 }
 
 div.dropdown-center > ul.dropdown-menu a:hover {
     background-color: var(--bs-success);
+    border-radius: 5px;
 }

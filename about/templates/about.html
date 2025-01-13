@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}Sobre{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'about/css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container p-3 about-container">
+    <div class="about-content">
+        <div class="about-content-header text-center">
+            <h2>Sobre</h2>
+            <div class="w-100 about-header-image">
+                <img src="{% static 'about/images/shop-about.jpg' %}" alt="Nossa Loja.">
+            </div>
+        </div>
+
+        <div class="about-content-body text-center p-2 my-2">
+            <p>
+                Bem-vindo(a)! Onde a moda, qualidade e preço justo se encontram!
+
+Acreditamos que cada peça de roupa é uma extensão da sua personalidade e estamos aqui para ajudar você a se expressar com estilo em todas as ocasiões. Seja para o dia a dia, eventos especiais ou aquele look casual perfeito, temos exatamente o que você procura.
+
+Nossa loja reúne as melhores marcas e materiais cuidadosamente selecionados para garantir conforto, durabilidade e, claro, aquele toque especial que só você tem. Trabalhamos para oferecer uma experiência única, unindo tendências modernas e clássicos indispensáveis.
+
+Além de produtos incríveis, nos orgulhamos de proporcionar um atendimento dedicado e uma navegação fácil pelo site, tudo para que sua experiência de compra seja a mais agradável possível.
+
+Não é apenas roupa, é confiança, estilo e qualidade que você encontra aqui. Explore nosso catálogo e encontre suas próximas combinações favoritas!
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

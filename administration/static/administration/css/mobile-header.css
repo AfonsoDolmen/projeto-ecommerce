@@ -1,18 +1,14 @@
-.mobile-header {
-    display: none;
-}
-
 @media screen and (max-width: 520px) {
     main {
         display: block;
     }
     
     .sidebar-container {
-        display:none;
+        display: none;
     }
 
     .mobile-header {
-        display: block;
+        display: flex !important;
         background-color: #343a40;
         margin-bottom: 20px;
     }

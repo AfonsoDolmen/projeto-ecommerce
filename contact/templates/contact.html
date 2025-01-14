@@ -3,5 +3,30 @@
 {% block title %}Contato{% endblock %}
 
 {% block content %}
+<div class="container p-3 contact-container">
+    <div class="d-flex justify-content-center py-3 contact-content">
+        <div class="w-50 contact-form">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group my-1">
+                    {{ form.email }}
+                </div>
 
+                <div class="form-group my-1">
+                    {{ form.subject }}
+                </div>
+
+                <div class="form-group my-1">
+                    {{ form.message }}
+                </div>
+
+                <div class="d-flex justify-content-center my-3 submit-container">
+                    <div class="w-25 submit-content">
+                        <input class="w-100 btn btn-dark" type="submit" value="Enviar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

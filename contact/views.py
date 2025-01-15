@@ -6,7 +6,10 @@ from contact.forms import ContactForm
 
 class ContactView(View):
     def get(self, *args, **kwargs):
-        form = ContactForm(data={'email': self.request.user.email})
+        form = ContactForm()
+
+        if self.request.user.is_authenticated is True:
+            form = ContactForm(data={'email': self.request.user.email})
         
         return render(self.request, 'contact.html', {
             'form': form,

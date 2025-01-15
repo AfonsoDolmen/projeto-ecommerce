@@ -22,7 +22,11 @@
 
                 <div class="d-flex justify-content-center my-3 submit-container">
                     <div class="w-25 submit-content">
-                        <input class="w-100 btn btn-dark" type="submit" value="Enviar">
+                        {% if user.is_authenticated %}
+                            <input class="w-100 btn btn-dark" type="submit" value="Enviar">
+                        {% else %}
+                            <p class="text-center">Por favor, faça login para entrar em contato.</p>
+                        {% endif %}
                     </div>
                 </div>
             </form>

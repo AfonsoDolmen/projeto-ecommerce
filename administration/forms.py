@@ -44,7 +44,7 @@ class ProductForm(forms.ModelForm):
     def clean_price(self):
         price = self.cleaned_data['price']
 
-        if price is 0:
+        if price == 0:
             self.add_error('price', 'O preço não pode ser 0.')
 
         if price < 50:
@@ -52,10 +52,10 @@ class ProductForm(forms.ModelForm):
 
         return price
 
-    def clean_stock(self):
-        stock = self.cleaned_data['stock']
+    def clean_quantity(self):
+        quantity = self.cleaned_data['quantity']
 
-        if stock is 0:
-            self.add_error('stock', 'A quantidade não pode ser 0.')
+        if quantity == 0:
+            self.add_error('quantity', 'A quantidade não pode ser 0.')
 
-        return stock
+        return quantity

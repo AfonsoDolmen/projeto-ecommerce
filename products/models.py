@@ -70,12 +70,6 @@ class StockMovement(models.Model):
 
     quantity = models.PositiveIntegerField(verbose_name='Quantidade')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
-    user = models.ForeignKey(
-        User,
-        on_delete=models.PROTECT,
-        related_name='movementUser',
-        verbose_name='Cliente'
-    )
 
     def __str__(self):
         return self.product.title
